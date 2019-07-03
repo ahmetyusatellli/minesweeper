@@ -132,6 +132,7 @@ void initGrid(cell grid[][gridSize])
 	int i=0,j=0;
 	const int sizeConst = size;
 	int normal;
+	cell arr[255];
 	/*cell arr[255] = {closedEmpty, closedMined,closedMined,closedEmpty,closedEmpty,closedEmpty,closedMined,closedMined,closedEmpty,closedEmpty,closedEmpty,closedEmpty,closedEmpty,closedEmpty,closedEmpty,closedEmpty};*/
 	normal = (int)(gridSize * gridSize) / 4;
 	/*int easy,hard;
@@ -226,8 +227,8 @@ void printGrid (cell grid[][gridSize])
 			while(gridSize2>0)
 			{	
 				if(grid[x][y] == closedEmpty || grid[x][y] == closedMined)
-					/*printf(" . |");*/
-					printf(" %d |",grid[x][y]);
+					printf(" . |");			// close grid
+					//printf(" %d |",grid[x][y]);	// open grid
 				/*yukarıdaki printf i nerelerde mayin oldgunu ogrenebilmek icin acabilirsiniz.*/
 				else if(grid[x][y] == empty)
 					printf(" e |");
